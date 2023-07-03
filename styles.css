@@ -1,0 +1,119 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Serif Display", serif;
+  color: #8a563f;
+  background-color: #f8f8f8;
+}
+
+/* Navigation */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
+  font-size: 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #8a563f;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #6e7266;
+}
+
+/* K&J Section / Landing Page */
+#landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#landing h1 {
+  font-weight: bold;
+  font-size: 3em; /*adjust as needed*/
+}
+
+#landing h2 {
+  font-size: 2em; /*adjust as needed*/
+}
+
+#landing p {
+  font-size: 1.5em; /*adjust as needed*/
+  justify-content: end;
+}
+
+/* Address Section */
+#address {
+  background-image: url("/images/woods.jpg"); /*Add your image url here*/
+  background-size: cover;
+  background-position: center;
+  color: #f8f8f8;
+  text-align: center;
+  height: 100vh;
+  opacity: 80%;
+}
+
+/* Countdown & Drinks Information Section */
+#countdown-drinks {
+  display: flex;
+  justify-content: space-around;
+  height: 40vh;
+}
+
+#countdown {
+  background-color: #f8f8f8;
+  color: #6e7266;
+  width: 60%;
+}
+
+#drinks {
+  background-color: #6e7266;
+  color: #f8f8f8;
+  width: 40%;
+}
+
+/* Directions Section */
+#directions {
+  display: flex;
+  justify-content: space-around;
+}
+
+#directions img {
+  width: 140%;
+}
+
+#directions-text {
+  padding: 5%;
+}
+
+#directions-text h2,
+#directions-text p {
+  margin: 10% 0;
+}
+
+/* Direction Info Section */
+#direction-info {
+}
+
+#direction-info h2 {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+#direction-info .info-text {
+  /* Style as desired, might need additional classes or ids */
+}
+
+/* Adjust button and link styles as needed */
+button,
+a {
+  /* Style as desired */
+}
