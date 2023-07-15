@@ -200,6 +200,7 @@ nav a:hover::after {
   font-weight: 900;
   color: #6e7266; /* Changes the color of the numbers */
   padding-top: 3rem;
+  letter-spacing: 0.4em;
 }
 
 .time-text {
@@ -207,13 +208,34 @@ nav a:hover::after {
   font-weight: 900;
   color: #6e7266; /* Changes the color of the text */
   padding-bottom: 3rem;
+  letter-spacing: 0.4em;
 }
 
 #drinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #6e7266;
   color: #f8f8f8;
-  width: 40vw; /* width is now based on viewport width */
-  height: 40vh; /* height matches width */
+  width: 40vw;
+  height: 40vh;
+  padding: 5%;
+}
+
+#drinks .drinks-event {
+  font-size: clamp(2rem, 2vw, 2.5rem);
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 1em;
+  letter-spacing: 0.4em;
+}
+
+#drinks .drinks-supply {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.4em;
 }
 
 /* Media Query for screens smaller than 800px */
