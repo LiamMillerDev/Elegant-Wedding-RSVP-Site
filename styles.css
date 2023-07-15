@@ -1,8 +1,24 @@
 /* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;700;900&display=swap");
 
-/* General Styles */
+/* Reset default padding and margin */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
 html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   scroll-behavior: smooth;
 }
 
@@ -10,34 +26,55 @@ body {
   font-family: "Noto Serif Display", serif;
   color: #8a563f;
   background-color: #f8f8f8;
+  overflow-x: hidden;
 }
-
-/* Navigation */
 nav {
+  position: fixed; /* Use 'fixed' instead of 'sticky' to make nav stick to top even when scrolling */
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding-top: 2%;
+  padding: 1rem 0; /* This adds padding above and below your nav items */
   font-size: clamp(1rem, 2vw, 2rem);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1;
 }
 
 nav a {
+  position: relative;
   text-decoration: none;
   color: #8a563f;
   transition: color 0.2s ease-in-out;
   letter-spacing: 0.2em;
+  overflow: hidden; /* hides the underline before hover */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #6e7266;
+  transition: width 0.3s;
 }
 
 nav a:hover {
   color: #6e7266;
 }
-/* K&J Section / Landing Page */
+
+nav a:hover::after {
+  width: 100%;
+}
+
 #landing {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 85vh;
+  height: 100vh;
 }
 
 #title-container {
@@ -61,20 +98,12 @@ nav a:hover {
 
 #title-group h1 {
   font-weight: 900;
-  font-size: clamp(
-    2.5rem,
-    7vw,
-    7rem
-  ); /* Font size for H1 will now adjust between 2.5rem and 7rem based on the viewport width */
+  font-size: clamp(2.5rem, 7vw, 7rem);
   letter-spacing: 0.2em;
 }
 
 #title-group h2 {
-  font-size: clamp(
-    1rem,
-    4vw,
-    4rem
-  ); /* Font size for H2 will now adjust between 1.5rem and 4rem based on the viewport width */
+  font-size: clamp(0.9rem, 2.5vw, 2.5rem);
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.7em;
@@ -83,29 +112,68 @@ nav a:hover {
 #landing p {
   position: absolute;
   bottom: 10%;
-  width: 100%; /* to center the text */
-  text-align: center; /* to center the text */
-  font-size: clamp(
-    1.5rem,
-    2.5vw,
-    2.5rem
-  ); /* Font size for paragraph will now adjust between 1rem and 2.5rem based on the viewport width */
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 300;
-  letter-spacing: 0.2em; /*adjust as needed*/
+  letter-spacing: 0.2em;
 }
 
-/* Address Section */
 #address {
-  background-image: url("/images/woods.jpg"); /*Add your image url here*/
-  background-size: cover;
-  background-position: center;
+  position: relative;
   color: #f8f8f8;
   text-align: center;
   height: 100vh;
-  opacity: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5rem 0;
 }
 
-/* Countdown & Drinks Information Section */
+.semi-transparent-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/woods.jpg") center/cover no-repeat;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Classes for each line */
+
+.address-line1 {
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: 0.4em;
+  text-shadow: 2px 2px 5px #8a563f;
+  padding: 2rem;
+}
+
+.address-line2 {
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: 0.4em;
+  text-shadow: 2px 2px 5px #8a563f;
+}
+
+.address-line3 {
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: 0.4em;
+  text-shadow: 2px 2px 5px #8a563f;
+  padding: 2rem;
+}
+.address-line4 {
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 2rem);
+  letter-spacing: 0.2em;
+  text-shadow: 2px 2px 5px #8a563f;
+}
+
 #countdown-drinks {
   display: flex;
   justify-content: space-around;
@@ -124,7 +192,6 @@ nav a:hover {
   width: 40%;
 }
 
-/* Directions Section */
 #directions {
   display: flex;
   justify-content: space-around;
@@ -143,21 +210,11 @@ nav a:hover {
   margin: 10% 0;
 }
 
-/* Direction Info Section */
-#direction-info {
-}
-
 #direction-info h2 {
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
 
 #direction-info .info-text {
-  /* Style as desired, might need additional classes or ids */
-}
-
-/* Adjust button and link styles as needed */
-button,
-a {
   /* Style as desired */
 }
