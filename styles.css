@@ -161,19 +161,18 @@ nav a:hover::after {
 }
 
 .address-line3 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: clamp(2rem, 4vw, 4rem);
   letter-spacing: 0.4em;
   text-shadow: 2px 2px 5px #8a563f;
   padding: 2rem;
 }
 .address-line4 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: clamp(1rem, 2vw, 2rem);
   letter-spacing: 0.2em;
   text-shadow: 2px 2px 5px #8a563f;
 }
-
 #countdown-drinks {
   display: flex;
   justify-content: space-around;
@@ -181,15 +180,58 @@ nav a:hover::after {
 }
 
 #countdown {
-  background-color: #f8f8f8;
-  color: #6e7266;
-  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 60vw;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.time-number {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  color: #6e7266; /* Changes the color of the numbers */
+  padding-top: 3rem;
+}
+
+.time-text {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 900;
+  color: #6e7266; /* Changes the color of the text */
+  padding-bottom: 3rem;
 }
 
 #drinks {
   background-color: #6e7266;
   color: #f8f8f8;
-  width: 40%;
+  width: 40vw; /* width is now based on viewport width */
+  height: 40vh; /* height matches width */
+}
+
+/* Media Query for screens smaller than 800px */
+@media (max-width: 800px) {
+  #countdown-drinks {
+    flex-direction: column; /* Stack countdown and drinks vertically */
+    align-items: center; /* Center-align the child elements */
+    height: auto; /* Let height adjust automatically */
+  }
+
+  #countdown {
+    width: 90%; /* Set the width to almost full-width */
+  }
+
+  #drinks {
+    width: 100vw; /* width is now based on viewport width */
+    height: 40vh; /* height matches width */
+  }
 }
 
 #directions {
