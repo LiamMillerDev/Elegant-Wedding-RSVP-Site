@@ -1,3 +1,6 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;700;900&display=swap");
+
 /* General Styles */
 html {
   scroll-behavior: smooth;
@@ -15,39 +18,80 @@ nav {
   display: flex;
   justify-content: space-around;
   padding-top: 2%;
-  font-size: 1.5em;
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 nav a {
   text-decoration: none;
   color: #8a563f;
   transition: color 0.2s ease-in-out;
+  letter-spacing: 0.2em;
 }
 
 nav a:hover {
   color: #6e7266;
 }
-
 /* K&J Section / Landing Page */
 #landing {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  position: relative;
+  height: 85vh;
 }
 
-#landing h1 {
-  font-weight: bold;
-  font-size: 3em; /*adjust as needed*/
+#title-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
-#landing h2 {
-  font-size: 2em; /*adjust as needed*/
+#title-group {
+  text-align: right;
+}
+
+#title-group h1,
+#title-group h2 {
+  margin: 0;
+}
+
+#title-group h1 {
+  font-weight: 900;
+  font-size: clamp(
+    2.5rem,
+    7vw,
+    7rem
+  ); /* Font size for H1 will now adjust between 2.5rem and 7rem based on the viewport width */
+  letter-spacing: 0.2em;
+}
+
+#title-group h2 {
+  font-size: clamp(
+    1rem,
+    4vw,
+    4rem
+  ); /* Font size for H2 will now adjust between 1.5rem and 4rem based on the viewport width */
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.7em;
 }
 
 #landing p {
-  font-size: 1.5em; /*adjust as needed*/
-  justify-content: end;
+  position: absolute;
+  bottom: 10%;
+  width: 100%; /* to center the text */
+  text-align: center; /* to center the text */
+  font-size: clamp(
+    1.5rem,
+    2.5vw,
+    2.5rem
+  ); /* Font size for paragraph will now adjust between 1rem and 2.5rem based on the viewport width */
+  font-weight: 300;
+  letter-spacing: 0.2em; /*adjust as needed*/
 }
 
 /* Address Section */
