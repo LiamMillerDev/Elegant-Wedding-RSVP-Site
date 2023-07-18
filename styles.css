@@ -206,6 +206,14 @@ nav a:hover::after {
   letter-spacing: 0.4em;
 }
 
+#time-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #6e7266; /* or any color you prefer */
+}
+
 #drinks {
   display: flex;
   flex-direction: column;
@@ -249,31 +257,125 @@ nav a:hover::after {
     width: 100vw; /* width is now based on viewport width */
     height: 40vh; /* height matches width */
   }
-}
+  #directions-container {
+    flex-direction: column; /* Stack map and directions-text vertically */
+  }
 
-#directions {
+  #map {
+    width: 100vw; /* Set the width to full-width for smaller screens */
+    height: 40vh !important;
+  }
+}
+#directions-container {
   display: flex;
-  justify-content: space-around;
+  align-items: stretch; /* make the children items take up full height */
 }
 
-#directions img {
-  width: 140%;
+#map {
+  height: auto;
+  width: 60%; /* Added this line */
 }
 
 #directions-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 40%; /* Added this line */
+}
+
+#rsvp-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  color: #6e7266;
+  width: 100%;
   padding: 5%;
+  height: 40vh;
 }
 
-#directions-text h2,
-#directions-text p {
-  margin: 10% 0;
+#rsvp-info h2 {
+  text-align: center;
+  color: #6e7266;
+  line-height: 4;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.4em;
 }
 
-#direction-info h2 {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+.rsvp-text {
+  border: 5px solid #6e7266;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: clamp(2rem, 2vw, 2.5rem);
+  font-weight: 900;
 }
 
-#direction-info .info-text {
-  /* Style as desired */
+/* Add a media query for screens smaller than 800px */
+
+@media (max-width: 800px) {
+  #directions {
+    flex-direction: column; /* Stack the map, rsvp, and directions-text vertically */
+  }
+
+  #map {
+    width: 100%; /* Set the width to full-width */
+    height: 100%; /* Increase the height */
+  }
+  #directions-text {
+    width: 100%; /* Set the width to full-width */
+    height: 60vh; /* Increase the height */
+  }
+
+  #rsvp-info {
+    width: 100%;
+  }
+}
+
+.info-section {
+  padding: 2rem; /* Add space around the content */
+  background-color: #f8f8f8; /* Set a background color */
+  color: #6e7266; /* Set a text color */
+  letter-spacing: 0.4em;
+}
+
+.info-section h2 {
+  margin-bottom: 1rem; /* Add space below the heading */
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  text-align: right;
+}
+
+.info-section p {
+  margin-bottom: 1rem; /* Add space below the paragraph */
+}
+
+.info-icon {
+  margin-bottom: 30px;
+  margin-right: 1rem;
+  width: 50px; /* adjust as needed */
+  height: 50px; /* adjust as needed */
+}
+
+.info-button {
+  display: inline-block;
+  border: 2px solid #6e7266; /* Change to your desired border color */
+  color: #6e7266; /* Change to your desired text color */
+  background-color: transparent;
+  text-align: center;
+  padding: 0.5em 1em;
+  font-size: clamp(
+    1rem,
+    2vw,
+    1.5rem
+  ); /* Adjust min, middle and max values as needed */
+  letter-spacing: 0.4em;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #6e7266; /* Change to your desired hover background color */
+  color: #fff; /* Change to your desired hover text color */
 }

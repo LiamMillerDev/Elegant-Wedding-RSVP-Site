@@ -58,6 +58,9 @@
             <span class="time-text">MINUTES</span>
           </div>
         </div>
+        <div id="time-up" style="display: none">
+          <h2>The wedding has started!</h2>
+        </div>
         <div id="drinks">
           <p class="drinks-event">BYO DRINK EVENT</p>
           <p class="drinks-supply">BUBBLES & NON ALCHOLIC DRINKS SUPPLIED</p>
@@ -65,27 +68,64 @@
       </section>
 
       <section id="directions">
-        <img src="map.jpg" alt="Map showing directions to the wedding" />
-        <div id="directions-text">
-          <p>RSVP by 15 February</p>
-          <h2>Getting There</h2>
-          <!-- Additional Directions Text -->
-          <button>Direction Info</button>
-          <a href="#">Book a Taxi</a>
+        <div id="directions-container">
+          <div id="map">
+            <!-- Google Maps Embed -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2031.177355766512!2d174.45861418916832!3d-36.75600359467634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ1JzIxLjYiUyAxNzTCsDI3JzM1LjEiRQ!5e1!3m2!1sen!2snz!4v1689477117568!5m2!1sen!2snz"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+          <div id="directions-text">
+            <section id="rsvp-info">
+              <div class="info-section">
+                <h2>
+                  <span class="rsvp-text">RSVP</span><br />
+                  BY 15 FEBRUARY
+                </h2>
+              </div>
+            </section>
+
+            <div class="info-section">
+              <h2 class="right-aligned">GETTING<br />THERE</h2>
+              <div class="button-wrapper">
+                <img
+                  src="images/parking.png"
+                  alt="Parking Icon"
+                  class="info-icon"
+                />
+                <p>
+                  If you are arriving in your own vehicle, there is plenty of
+                  grass parking available. Someone will be there to direct you.
+                  Please dedicate a sober driver and take a look at the
+                  direction information.
+                </p>
+                <button class="info-button">DIRECTION INFO</button>
+              </div>
+            </div>
+            <div class="info-section">
+              <img src="images/taxi.png" alt="Taxi Icon" class="info-icon" />
+              <div class="button-wrapper">
+                <p>
+                  If you would like to transport by Taxi or Uber please get them
+                  to do drop-offs/pickups in the parking area. We have contacted
+                  this company if you would like to pre-book your transport. We
+                  recommend sorting this the previous day.
+                </p>
+                <button class="info-button">BOOK A TAXI</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="direction-info">
-        <h2>Direction Info</h2>
-        <!-- Direction Info Here -->
-      </section>
-
-      <!-- Add sections for RSVP, FAQS, Footer and Donations -->
+      <!-- Add sections for DIRECTIONS-INFO, Donaintion, RSVP, footer -->
     </main>
-
-    <footer>
-      <!-- Add footer contents here -->
-    </footer>
     <script src="main.js"></script>
   </body>
 </html>
