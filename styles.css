@@ -339,6 +339,7 @@ nav a:hover::after {
   background-color: #f8f8f8; /* Set a background color */
   color: #6e7266; /* Set a text color */
   letter-spacing: 0.4em;
+  text-align: center;
 }
 
 .info-section h2 {
@@ -349,6 +350,13 @@ nav a:hover::after {
 
 .info-section p {
   margin-bottom: 1rem; /* Add space below the paragraph */
+  text-align: left;
+  letter-spacing: 0.2em;
+}
+
+.info-section img {
+  align-items: start;
+  display: flex;
 }
 
 .info-icon {
@@ -364,18 +372,126 @@ nav a:hover::after {
   color: #6e7266; /* Change to your desired text color */
   background-color: transparent;
   text-align: center;
-  padding: 0.5em 1em;
+  padding: 0.5em 3em;
   font-size: clamp(
     1rem,
     2vw,
     1.5rem
   ); /* Adjust min, middle and max values as needed */
   letter-spacing: 0.4em;
-  margin: 0 auto;
+  margin: 15px auto;
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Noto Serif Display", serif;
 }
 
 .info-button:hover {
   background-color: #6e7266; /* Change to your desired hover background color */
   color: #fff; /* Change to your desired hover text color */
+}
+
+#directions-info {
+  position: relative;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#directions-info h2 {
+  writing-mode: vertical-lr;
+  font-size: 2.2em;
+  position: absolute;
+  left: 0;
+  letter-spacing: 0.2em;
+  margin-left: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#directions-info img {
+  height: 2em;
+  margin: 1em 0;
+}
+
+/* Donation section */
+#donation {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url("images/donation-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+#donation h2 {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+#donation button {
+  padding: 0.5em 1em;
+  background-color: #f9f9f9;
+  border: none;
+  color: black;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* RSVP section */
+#rsvp {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#rsvp h2 {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+#rsvp form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+
+#rsvp input,
+#rsvp button {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+/* Footer */
+footer {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url("images/footer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
 }
