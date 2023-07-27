@@ -326,7 +326,6 @@ nav a:hover::after {
   }
   #directions-text {
     width: 100%; /* Set the width to full-width */
-    height: 60vh; /* Increase the height */
   }
 
   #rsvp-info {
@@ -387,63 +386,6 @@ nav a:hover::after {
 .info-button:hover {
   background-color: #6e7266; /* Change to your desired hover background color */
   color: #fff; /* Change to your desired hover text color */
-}
-
-#directions-info {
-  position: relative;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-#directions-info h2 {
-  writing-mode: vertical-lr;
-  font-size: 2.2em;
-  position: absolute;
-  left: 0;
-  letter-spacing: 0.2em;
-  margin-left: 40px;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-#directions-info img {
-  height: 2em;
-  margin: 1em 0;
-}
-
-/* Donation section */
-#donation {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  background-image: url("images/donation-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
-#donation h2 {
-  margin-bottom: 1em;
-  font-size: 2em;
-}
-
-#donation button {
-  padding: 0.5em 1em;
-  background-color: #f9f9f9;
-  border: none;
-  color: black;
-  font-size: 1em;
-  cursor: pointer;
 }
 
 /* RSVP section */
