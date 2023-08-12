@@ -387,36 +387,113 @@ nav a:hover::after {
   background-color: #6e7266; /* Change to your desired hover background color */
   color: #fff; /* Change to your desired hover text color */
 }
-
-/* RSVP section */
-#rsvp {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* donation section */
+#donation {
+  background-image: url("images/donation.png");
+  color: white;
+  padding: 20px;
+  text-align: left;
   height: 100vh;
-  text-align: center;
-}
-
-#rsvp h2 {
-  margin-bottom: 1em;
-  font-size: 2em;
-}
-
-#rsvp form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  width: 100%;
-  max-width: 300px;
-  margin: auto;
+  justify-content: flex-end;
 }
 
-#rsvp input,
-#rsvp button {
-  padding: 0.5em;
-  font-size: 1em;
+#donation h2 {
+  font-size: clamp(1.2em, 1.8vw, 1.8em);
+  text-transform: uppercase;
+  width: 60%;
+  margin-left: 4rem;
+  letter-spacing: 0.5em;
+  margin-bottom: 2rem;
+}
+
+#donation p {
+  text-transform: uppercase;
+  width: 65%;
+  margin-left: 4rem;
+  margin-bottom: 6em;
+  letter-spacing: 0.3em;
+}
+
+#donation a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #donation {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #donation h2,
+  #donation p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #donation p {
+    margin-bottom: 3em;
+  }
+}
+
+/* RSVP Section */
+#rsvp {
+  position: relative;
+}
+
+/* Hello lovelies, Text */
+.hello-text-container {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 10%;
+  right: 5%;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.lovelies-text {
+  color: #6e7266;
+}
+
+/* Form Instructions */
+.form-instructions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 10%;
+}
+
+.form-column {
+  display: grid;
+  grid-template-rows: 4, 1fr;
+  justify-content: center;
+}
+
+/* Input Fields */
+.form-group {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+/* See you soon x Text */
+.see-you-text-container {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 10%;
+  left: 5%;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+.see-you-soon {
+  color: #6e7266;
 }
 
 /* Footer */

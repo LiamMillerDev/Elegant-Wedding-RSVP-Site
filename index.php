@@ -1,0 +1,231 @@
+<?php
+$message = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = sanitize_input($_POST["name"]);
+  $rsvp = sanitize_input($_POST["rsvp"]);
+  $dietary = sanitize_input($_POST["dietary"]);
+  $song_title = sanitize_input($_POST["song-title"]);
+  $artist = sanitize_input($_POST["artist"]);
+
+  if (empty($name) || !in_array($rsvp, ["yes", "no"])) {
+    $message = "Please fill in the required fields.";
+  } else {
+    $subject = "RSVP FORM";
+    $body = "Name: $name\nRSVP: $rsvp\nDietary Restrictions: $dietary\nSong Title: $song_title\nArtist: $artist";
+    $headers = "From: webmaster@example.com";
+
+    if (mail("liamjmillernz@gmail.com", $subject, $body, $headers)) {
+      $message = "Thank you for your RSVP!";
+    } else {
+      $message = "An error occurred. Please try again.";
+    }
+  }
+}
+
+function sanitize_input($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kain & Jamie Wedding</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#landing">K&J</a>
+      <a href="#directions">DIRECTIONS</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#faqs">FAQS</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="landing">
+      <article id="title-container">
+        <div id="title-group">
+          <h1>KAIN & JAMIE</h1>
+          <h2>are getting married</h2>
+        </div>
+      </article>
+      <p>15.03.2024</p>
+    </section>
+
+    <section id="address">
+      <div class="semi-transparent-background"></div>
+      <address>
+        <p class="address-line1">1256 State Highway 16</p>
+        <p class="address-line2">WAIMAUKU</p>
+      </address>
+      <aside>
+        <p class="address-line3">3PM Ceremony</p>
+        <p class="address-line4">DRINKS, DINNER, AND DANCING TO FOLLOW</p>
+      </aside>
+    </section>
+
+    <section id="countdown-drinks">
+      <div id="countdown">
+        <div class="time-container">
+          <span id="days" class="time-number"></span>
+          <span class="time-text">DAYS</span>
+        </div>
+        <div class="time-container">
+          <span id="hours" class="time-number"></span>
+          <span class="time-text">HOURS</span>
+        </div>
+        <div class="time-container">
+          <span id="minutes" class="time-number"></span>
+          <span class="time-text">MINUTES</span>
+        </div>
+      </div>
+      <div id="time-up" style="display: none">
+        <h2>The wedding has started!</h2>
+      </div>
+      <div id="drinks">
+        <p class="drinks-event">BYO DRINK EVENT</p>
+        <p class="drinks-supply">BUBBLES & NON ALCHOLIC DRINKS SUPPLIED</p>
+      </div>
+    </section>
+
+    <section id="directions">
+      <div id="directions-container">
+        <div id="map">
+          <!-- Google Maps Embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2031.177355766512!2d174.45861418916832!3d-36.75600359467634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDQ1JzIxLjYiUyAxNzTCsDI3JzM1LjEiRQ!5e1!3m2!1sen!2snz!4v1689477117568!5m2!1sen!2snz" width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div id="directions-text">
+          <section id="rsvp-info">
+            <div class="info-section">
+              <h2>
+                <span class="rsvp-text">RSVP</span><br />
+                BY 15 FEBRUARY
+              </h2>
+            </div>
+          </section>
+
+          <div class="info-section">
+            <h2 class="right-aligned">GETTING<br />THERE</h2>
+            <div class="button-wrapper">
+              <img src="images/parking.png" alt="Parking Icon" class="info-icon" />
+              <p>
+                If you are arriving in your own vehicle, there is plenty of
+                grass parking available. Someone will be there to direct you.
+                Please dedicate a sober driver and take a look at the
+                direction information.
+              </p>
+              <button class="info-button">DIRECTION INFO</button>
+            </div>
+          </div>
+          <div class="info-section">
+            <img src="images/taxi.png" alt="Taxi Icon" class="info-icon" />
+
+            <div class="button-wrapper">
+              <p>
+                If you would like to transport by Taxi or Uber please get them
+                to do drop-offs/pickups in the parking area. We have contacted
+                this company if you would like to pre-book your transport. We
+                recommend sorting this the previous day.
+              </p>
+
+              <button class="info-button">BOOK A TAXI</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="donation">
+      <h2>
+        your presence at our wedding is the only present we desire as we know
+        there are a lot of out of town guests and a byo request.
+      </h2>
+      <p>
+        however, if you wish to further bless us with a koha then we have
+        created a honeymoon fund which you can check out
+        <a href="LINK_TO_DONATION_PAGE">here...</a>
+      </p>
+    </section>
+
+    <section id="rsvp">
+      <div class="hello-text-container">
+        <h2 class="lovelies-text">Hello lovelies,</h2>
+      </div>
+      <form action="" method="post"> <!-- Added form tag -->
+        <div class="form-container">
+          <!-- Left Column -->
+          <div class="form-column">
+            <div class="form-instruction">
+              Kindly RSVP by the form below or on 02040162488
+            </div>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="rsvp">RSVP:</label>
+              <select id="rsvp" name="rsvp">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dietary">Dietary Restrictions:</label>
+              <select id="dietary" name="dietary">
+                <option value="none">None</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten Free</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="form-column">
+            <div class="form-instruction">
+              Please hit us with a party starter song request:
+            </div>
+            <div class="form-group">
+              <label for="song-title">Song Title:</label>
+              <input type="text" id="song-title" name="song-title" />
+            </div>
+            <div class="form-group">
+              <label for="artist">Artist:</label>
+              <input type="text" id="artist" name="artist" />
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Submit" />
+            </div>
+          </div>
+        </div>
+      </form> <!-- Closing form tag -->
+
+
+      <div class="see-you-text-container">
+        <h2 class="see-you-soon">See you soon x</h2>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Thank you for your love and support. We can't wait to celebrate with
+        you!
+      </p>
+      <!-- You can add more content here like social media links, contact info, etc. -->
+    </footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
