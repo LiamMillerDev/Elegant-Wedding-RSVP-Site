@@ -165,12 +165,11 @@ function sanitize_input($data)
       </div>
     </section>
 
-
     <section id="rsvp">
       <div class="hello-text-container">
         <h2 class="lovelies-text">Hello lovelies,</h2>
       </div>
-      <form action="" method="post"> <!-- Added form tag -->
+      <form action="" method="post">
         <div class="form-container">
           <!-- Left Column -->
           <div class="form-column">
@@ -178,7 +177,7 @@ function sanitize_input($data)
               Kindly RSVP by the form below or on 02040162488
             </div>
             <div class="form-group">
-              <label for="name">Name:</label>
+              <label for="name">Full name:</label>
               <input type="text" id="name" name="name" required />
             </div>
             <div class="form-group">
@@ -217,8 +216,7 @@ function sanitize_input($data)
             </div>
           </div>
         </div>
-      </form> <!-- Closing form tag -->
-
+      </form>
 
       <div class="see-you-text-container">
         <h2 class="see-you-soon">See you soon x</h2>

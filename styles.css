@@ -468,28 +468,43 @@ nav a:hover::after {
 
 /* Hello lovelies, Text */
 .hello-text-container {
-  position: absolute;
-  font-size: 1.5rem;
-  top: 10%;
-  right: 5%;
+  display: inline-block;
+  font-size: 2rem;
+  width: 100%;
+  text-align: right;
   text-transform: uppercase;
   letter-spacing: 0.3em;
 }
 .lovelies-text {
   color: #6e7266;
 }
-
-/* Form Instructions */
-.form-instructions {
-  display: flex;
-  justify-content: space-between;
+.hello-text-container h2,
+.see-you-text-container h2 {
+  display: inline;
 }
 
+/* Form Instructions */
+.form-instruction {
+  font-size: clamp(1.3rem, 1.5vw, 2.7rem); /* Increased font size */
+  letter-spacing: 0.4rem; /* Added letter spacing */
+  font-weight: 300; /* Added font weight */
+  text-align: center;
+}
+
+/* Form Layout */
 .form-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  padding: 10%;
+  padding: 5%;
+  gap: 15%;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .form-column {
@@ -500,16 +515,56 @@ nav a:hover::after {
 
 /* Input Fields */
 .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 3rem 0;
 }
 
+/* Form Styling */
+#rsvp form,
+#rsvp label,
+#rsvp input,
+#rsvp select {
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+  color: #6e7266;
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  border-color: #6e7266;
+}
+
+.form-group label {
+  margin-right: 1rem;
+}
+
+#rsvp input[type="text"],
+#rsvp select {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 2px solid #6e7266;
+}
+
+#rsvp input[type="submit"] {
+  background-color: #6e7266;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: auto;
+}
+
+#rsvp input[type="submit"]:hover {
+  background-color: #5b6058;
+}
+
 /* See you soon x Text */
 .see-you-text-container {
-  position: absolute;
-  font-size: 1.5rem;
-  bottom: 10%;
-  left: 5%;
+  display: inline-block;
+  font-size: 2rem;
+  width: 100%;
+  text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.3em;
 }
