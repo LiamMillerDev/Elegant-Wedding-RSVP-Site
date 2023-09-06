@@ -65,14 +65,13 @@ function sanitize_input($data)
 
     <section id="address">
       <div class="semi-transparent-background"></div>
-      <address>
-        <p class="address-line1">1256 State Highway 16</p>
-        <p class="address-line2">WAIMAUKU</p>
-      </address>
-      <aside>
-        <p class="address-line3">3PM Ceremony</p>
-        <p class="address-line4">DRINKS, DINNER, AND DANCING TO FOLLOW</p>
-      </aside>
+
+      <p class="address-line1">3'OCLOCK IN THE AFTERNOON</p>
+      <p class="address-line2">1256 STATE HIGHWAY 16, WAIMAUKAU </p>
+
+      <p class="address-line3">DRINKS, DINNER, AND DANCING TO FOLLOW</p>
+      <a href="#rsvp" class="address-button">CLICK HERE TO RSVP</a>
+
     </section>
 
     <section id="countdown-drinks">
@@ -146,17 +145,26 @@ function sanitize_input($data)
       </div>
     </section>
 
-    <section id="donation">
-      <h2>
-        your presence at our wedding is the only present we desire as we know
-        there are a lot of out of town guests and a byo request.
-      </h2>
-      <p>
-        however, if you wish to further bless us with a koha then we have
-        created a honeymoon fund which you can check out
-        <a href="LINK_TO_DONATION_PAGE">here...</a>
-      </p>
+    <section id="faqs">
+      <img src="path/to/flower1.png" class="flower-top-right">
+      <img src="path/to/flower2.png" class="flower-bottom-left">
+      <div class="faq-content">
+        <h2 class="faq-question">YOUR QUESTIONS ANSWERED...</h2>
+
+        <h3 class="faq-question">What should I wear?</h3>
+        <p>The vibe is formal casual but please wear what you feel good in. Our bridal party colours are copper & navy. Also, the venue is mostly grass so you have been warned when choosing your shoes.</p>
+
+        <h3 class="faq-question">Can I help in any way?</h3>
+        <p>Absolutely! We will be at the venue setting up Wednesday to Friday and packing down Saturday to midday Sunday, and lots of little jobs to giveaway on the day. Swing by if you want to join in! We will also never say no to any baking!</p>
+
+        <h3 class="faq-question">The post-wedding brunch</h3>
+        <p>We will be back at the venue the following day at about 10am for a bbq brunch which all are welcome to attend.</p>
+
+        <h3 class="faq-question">What can I bring as a gift?</h3>
+        <p>We honestly don't expect any gifts as we are asking you all to bring your own alcohol and most of you are from out of town. Though, we know some of you will not take no as an answer and in that case we would love a small koha to our honeymoon in Port Douglas.</p>
+      </div>
     </section>
+
 
     <section id="rsvp">
       <div class="hello-text-container">
@@ -218,11 +226,7 @@ function sanitize_input($data)
     </section>
 
     <footer>
-      <p>
-        Thank you for your love and support. We can't wait to celebrate with
-        you!
-      </p>
-      <!-- You can add more content here like social media links, contact info, etc. -->
+      <h2>15. 03. 2024</h2>
     </footer>
   </main>
   <script src="main.js"></script>

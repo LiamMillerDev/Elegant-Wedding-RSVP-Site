@@ -133,41 +133,60 @@ nav a:hover::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/images/woods.jpg") center/cover no-repeat;
-  opacity: 0.6;
+  background: url("/images/Reception.png") center/cover no-repeat;
+
   z-index: -1;
+}
+
+#address p {
+  max-width: 80%;
 }
 
 /* Classes for each line */
 
 .address-line1 {
-  font-weight: 900;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   letter-spacing: 0.4em;
   text-shadow: 2px 2px 5px #8a563f;
-  padding: 2rem;
 }
 
 .address-line2 {
   font-weight: 900;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   letter-spacing: 0.4em;
   text-shadow: 2px 2px 5px #8a563f;
 }
 
 .address-line3 {
-  font-weight: 900;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   letter-spacing: 0.4em;
   text-shadow: 2px 2px 5px #8a563f;
-  padding: 2rem;
 }
-.address-line4 {
-  font-weight: 900;
-  font-size: clamp(1rem, 2vw, 2rem);
-  letter-spacing: 0.2em;
-  text-shadow: 2px 2px 5px #8a563f;
+
+.address-button {
+  font-family: "Noto Serif Display", serif;
+  font-weight: 300;
+  font-size: clamp(0.8rem, 2vw, 2rem);
+  letter-spacing: 0.3em;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-style: italic;
+  border: 4px solid white;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
 }
+.address-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.address-button:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 #countdown-drinks {
   display: flex;
   justify-content: space-around;
@@ -387,57 +406,59 @@ nav a:hover::after {
   background-color: #6e7266; /* Change to your desired hover background color */
   color: #fff; /* Change to your desired hover text color */
 }
-/* donation section */
-#donation {
-  background-image: url("images/donation.png");
-  color: white;
-  padding: 20px;
-  text-align: left;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+
+/* faq section styles */
+#faqs {
+  position: relative;
+  text-align: center;
+  color: #8a563f;
 }
 
-#donation h2 {
-  font-size: clamp(1.2em, 1.8vw, 1.8em);
-  text-transform: uppercase;
-  width: 60%;
-  margin-left: 4rem;
-  letter-spacing: 0.5em;
-  margin-bottom: 2rem;
+.flower-top-right,
+.flower-bottom-left {
+  position: absolute;
+  z-index: -1;
 }
 
-#donation p {
-  text-transform: uppercase;
-  width: 65%;
-  margin-left: 4rem;
-  margin-bottom: 6em;
-  letter-spacing: 0.3em;
+.flower-top-right {
+  top: 0;
+  right: 0;
 }
 
-#donation a {
-  color: white;
-  text-decoration: underline;
+.flower-bottom-left {
+  bottom: 0;
+  left: 0;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  #donation {
-    text-align: center;
-    justify-content: center;
-  }
+.faq-question {
+  font-size: clamp(1.2rem, 1.4vw, 1.8rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
-  #donation h2,
-  #donation p {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.faq-content {
+  padding: 2rem;
+  max-width: 80%;
+  margin: auto;
+}
 
-  #donation p {
-    margin-bottom: 3em;
-  }
+.faq-content p {
+  margin-bottom: clamp(1.5rem, 3vw, 3rem);
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+}
+
+.faq-content h3 {
+  margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+
+.faq-content h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: clamp(2rem, 3vw, 3rem);
+  margin-top: clamp(2rem, 3vw, 3rem);
+  letter-spacing: 0.4rem;
 }
 
 /* RSVP Section */
@@ -498,19 +519,22 @@ nav a:hover::after {
 
 /* Footer */
 footer {
-  padding: 2em;
+  padding: clamp(1em, 2vw, 2em);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   text-align: center;
-  background-image: url("images/footer-bg.jpg");
+  background-image: url("images/Footer.png");
   background-size: cover;
   background-position: center;
   color: white;
 }
 
-footer p {
-  font-size: 1em;
+footer h2 {
+  font-weight: 300;
+  font-size: clamp(4em, 6vw, 6em);
+  letter-spacing: clamp(0.1rem, 0.2vw, 0.2rem);
+  margin-bottom: clamp(5%, 10vw, 10%);
 }
