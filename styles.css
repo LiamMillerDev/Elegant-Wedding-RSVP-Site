@@ -438,7 +438,7 @@ nav a:hover::after {
 
 .faq-content {
   padding: 2rem;
-  max-width: 80%;
+  max-width: 60%;
   margin: auto;
 }
 
@@ -452,6 +452,7 @@ nav a:hover::after {
   margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 500;
   letter-spacing: 0.3rem;
+  font-size: clamp(1.4rem, 1.4vw, 1.8rem);
 }
 
 .faq-content h2 {
@@ -468,8 +469,10 @@ nav a:hover::after {
 
 /* Hello lovelies, Text */
 .hello-text-container {
-  display: inline-block;
-  font-size: 2rem;
+  position: relative;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  padding-top: 5%;
+  padding-right: 5%;
   width: 100%;
   text-align: right;
   text-transform: uppercase;
@@ -478,10 +481,6 @@ nav a:hover::after {
 .lovelies-text {
   color: #6e7266;
 }
-.hello-text-container h2,
-.see-you-text-container h2 {
-  display: inline;
-}
 
 /* Form Instructions */
 .form-instruction {
@@ -489,6 +488,7 @@ nav a:hover::after {
   letter-spacing: 0.4rem; /* Added letter spacing */
   font-weight: 300; /* Added font weight */
   text-align: center;
+  padding-bottom: 3.5rem;
 }
 
 /* Form Layout */
@@ -505,6 +505,10 @@ nav a:hover::after {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .faq-content {
+    max-width: 85%;
+  }
 }
 
 .form-column {
@@ -515,11 +519,10 @@ nav a:hover::after {
 
 /* Input Fields */
 .form-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block; /* Changed from flex */
   width: 100%;
-  padding: 3rem 0;
+  padding: 2.5rem 0; /* Adjusted padding */
+  text-align: center; /* Add this */
 }
 
 /* Form Styling */
@@ -536,11 +539,12 @@ nav a:hover::after {
 
 .form-group label {
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 #rsvp input[type="text"],
 #rsvp select {
-  flex-grow: 1;
+  flex-grow: 0;
   padding: 0.5rem;
   border: 2px solid #6e7266;
 }
@@ -561,8 +565,10 @@ nav a:hover::after {
 
 /* See you soon x Text */
 .see-you-text-container {
-  display: inline-block;
-  font-size: 2rem;
+  position: relative;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  padding-bottom: 5%;
+  padding-left: 5%;
   width: 100%;
   text-align: left;
   text-transform: uppercase;
@@ -571,7 +577,10 @@ nav a:hover::after {
 .see-you-soon {
   color: #6e7266;
 }
-
+.hello-text-container h2,
+.see-you-text-container h2 {
+  display: inline;
+}
 /* Footer */
 footer {
   padding: clamp(1em, 2vw, 2em);

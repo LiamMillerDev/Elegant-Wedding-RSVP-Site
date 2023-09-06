@@ -180,13 +180,7 @@ function sanitize_input($data)
               <label for="name">Full name:</label>
               <input type="text" id="name" name="name" required />
             </div>
-            <div class="form-group">
-              <label for="rsvp">RSVP:</label>
-              <select id="rsvp" name="rsvp">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
+
             <div class="form-group">
               <label for="dietary">Dietary Restrictions:</label>
               <select id="dietary" name="dietary">
@@ -194,6 +188,13 @@ function sanitize_input($data)
                 <option value="vegetarian">Vegetarian</option>
                 <option value="vegan">Vegan</option>
                 <option value="gluten-free">Gluten Free</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rsvp">RSVP:</label>
+              <select id="rsvp" name="rsvp">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
               </select>
             </div>
           </div>
