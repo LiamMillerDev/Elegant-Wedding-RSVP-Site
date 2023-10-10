@@ -60,7 +60,7 @@ function sanitize_input($data)
           <h2>are getting married</h2>
         </div>
       </article>
-      <p>15.03.2024</p>
+      <p>FRIDAY 15th MARCH 2024</p>
     </section>
 
     <section id="address">
@@ -124,7 +124,7 @@ function sanitize_input($data)
                 Please dedicate a sober driver and take a look at the
                 direction information.
               </p>
-              <button class="info-button">DIRECTION INFO</button>
+              <button class="info-button" onclick="getDirections()">GET DIRECTIONS</button>
             </div>
           </div>
           <div class="info-section">
