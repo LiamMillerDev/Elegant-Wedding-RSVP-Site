@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Existing code for wedding countdown
-  const weddingDate = new Date("2024-03-15T15:00:00"); // Date and time of the wedding
+  const weddingDate = new Date("2024-03-15T14:30:00+13:00"); // Date and time of the wedding in NZT
 
   function updateCountdown() {
     let now = new Date();

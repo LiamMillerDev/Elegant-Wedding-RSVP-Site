@@ -418,16 +418,19 @@ nav a:hover::after {
 .flower-bottom-left {
   position: absolute;
   z-index: -1;
+  height: 25%;
 }
 
 .flower-top-right {
   top: 0;
   right: 0;
+  transform: rotate(155deg);
 }
 
 .flower-bottom-left {
   bottom: 0;
   left: 0;
+  transform: rotate(-25deg);
 }
 
 .faq-question {
@@ -460,6 +463,32 @@ nav a:hover::after {
   margin-bottom: clamp(2rem, 3vw, 3rem);
   margin-top: clamp(2rem, 3vw, 3rem);
   letter-spacing: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  #faqs .flower-top-right,
+  #faqs .flower-bottom-left {
+    position: absolute;
+    left: 50%; /* Center horizontally */
+
+    z-index: 0; /* Position behind content */
+    height: 10%;
+  }
+
+  #faqs .flower-top-right {
+    top: 0; /* Position at the top inside FAQ section */
+    transform: translateX(-50%) rotate(55deg); /* Horizontal centering and rotation */
+  }
+
+  #faqs .flower-bottom-left {
+    bottom: 0; /* Position at the bottom inside FAQ section */
+    transform: translateX(-50%) rotate(-125deg); /* Horizontal centering and rotation */
+  }
+
+  .faq-content {
+    padding-top: 100px; /* Additional space at the top */
+    padding-bottom: 100px; /* Additional space at the bottom */
+  }
 }
 
 /* RSVP Section */
@@ -508,6 +537,14 @@ nav a:hover::after {
 
   .faq-content {
     max-width: 85%;
+  }
+  /* Adjust the selectors if your FAQ section has a specific class or ID */
+  .faq-section h3 {
+    font-weight: bold; /* Makes h3 elements bolder */
+  }
+
+  .faq-section p {
+    letter-spacing: normal; /* Reduces letter spacing for p elements */
   }
 }
 
@@ -563,6 +600,25 @@ nav a:hover::after {
   background-color: #5b6058;
 }
 
+@media (max-width: 1200px) {
+  #rsvp .form-group label,
+  #rsvp .form-group input,
+  #rsvp .form-group select {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  #rsvp .form-group label {
+    margin-bottom: 5px !important;
+  }
+
+  #rsvp .form-column {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+}
+
 /* See you soon x Text */
 .see-you-text-container {
   position: relative;
@@ -583,6 +639,7 @@ nav a:hover::after {
 }
 /* Footer */
 footer {
+  position: relative;
   padding: clamp(1em, 2vw, 2em);
   display: flex;
   flex-direction: column;
@@ -601,4 +658,11 @@ footer h2 {
   font-size: clamp(4em, 6vw, 6em);
   letter-spacing: clamp(0.1rem, 0.2vw, 0.2rem);
   margin-bottom: clamp(5%, 10vw, 10%);
+}
+
+footer #footer-logo {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 100px; /* Adjust the size as needed */
 }

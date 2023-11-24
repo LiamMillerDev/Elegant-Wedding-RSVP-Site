@@ -40,13 +40,13 @@ function sanitize_input($data)
   <title>Kain & Jamie Wedding</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/K&J_logo.png" type="image/png">
 </head>
 
 <body>
   <header>
     <nav>
       <a href="#landing">K&J</a>
-      <a href="#directions">DIRECTIONS</a>
       <a href="#rsvp">RSVP</a>
       <a href="#faqs">FAQS</a>
     </nav>
@@ -138,7 +138,10 @@ function sanitize_input($data)
                 recommend sorting this the previous day.
               </p>
 
-              <button class="info-button">BOOK A TAXI</button>
+              <a href="https://www.uber.com/nz/en/" target="_blank" class="info-button-link">
+                <button class="info-button">BOOK A TAXI</button>
+              </a>
+
             </div>
           </div>
         </div>
@@ -146,8 +149,8 @@ function sanitize_input($data)
     </section>
 
     <section id="faqs">
-      <img src="path/to/flower1.png" class="flower-top-right">
-      <img src="path/to/flower2.png" class="flower-bottom-left">
+      <img src="images/watercolour_leaves.png" class="flower-top-right">
+      <img src="images/watercolour_leaves.png" class="flower-bottom-left">
       <div class="faq-content">
         <h2 class="faq-question">YOUR QUESTIONS ANSWERED...</h2>
 
@@ -226,6 +229,7 @@ function sanitize_input($data)
 
     <footer>
       <h2>15. 03. 2024</h2>
+      <img src="images/K&J_logo.png" alt="Logo" id="footer-logo">
     </footer>
   </main>
   <script src="main.js"></script>
