@@ -323,13 +323,28 @@ nav a:hover::after {
   letter-spacing: 0.4em;
 }
 
-.rsvp-text {
-  border: 5px solid #6e7266;
-  padding: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: clamp(2rem, 2vw, 2.5rem);
-  font-weight: 900;
+.rsvp-button {
+  background-color: transparent; /* Transparent background */
+  color: #6e7266; /* Color from the parent style */
+  border: 5px solid #6e7266; /* Matching border */
+  padding: 5px 30px; /* Matching padding */
+  font-family: "Noto Serif Display", serif; /* Setting the specific font family */
+  font-size: clamp(2rem, 2vw, 2.5rem); /* Adjusted font size */
+  font-weight: 700; /* Regular font weight */
+  cursor: pointer; /* Change cursor on hover */
+  text-align: center; /* Center the text */
+  display: inline-block; /* Align it inline with other elements */
+  margin: 0; /* No additional margin */
+  border-radius: 0; /* No rounded corners to match the style */
+}
+
+.rsvp-button:hover {
+  background-color: rgba(
+    110,
+    114,
+    102,
+    0.1
+  ); /* Slight background change on hover */
 }
 
 /* Add a media query for screens smaller than 800px */
@@ -400,6 +415,7 @@ nav a:hover::after {
   margin: 15px auto;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: "Noto Serif Display", serif;
+  cursor: pointer;
 }
 
 .info-button:hover {
@@ -501,9 +517,8 @@ nav a:hover::after {
   position: relative;
   font-size: clamp(1rem, 1.5vw, 2rem);
   padding-top: 5%;
-  padding-right: 5%;
   width: 100%;
-  text-align: right;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.3em;
 }
@@ -624,9 +639,8 @@ nav a:hover::after {
   position: relative;
   font-size: clamp(1rem, 1.5vw, 2rem);
   padding-bottom: 5%;
-  padding-left: 5%;
   width: 100%;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.3em;
 }
