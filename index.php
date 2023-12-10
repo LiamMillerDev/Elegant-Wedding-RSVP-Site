@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body = "Name: $name\nRSVP: $rsvp\nDietary Restrictions: $dietary\nSong Title: $song_title\nArtist: $artist";
     $headers = "From: webmaster@example.com";
 
-    if (mail("liamjmillernz@gmail.com", $subject, $body, $headers)) {
+    if (mail("jamie.miller.23nz@gmail.com", $subject, $body, $headers)) {
       $message = "Thank you for your RSVP!";
     } else {
       $message = "An error occurred. Please try again.";
@@ -66,7 +66,7 @@ function sanitize_input($data)
     <section id="address">
       <div class="semi-transparent-background"></div>
 
-      <p class="address-line1">3'OCLOCK IN THE AFTERNOON</p>
+      <p class="address-line1">CEREOMONY BEGINS ARE 2:30PM</p>
       <p class="address-line2">1256 STATE HIGHWAY 16, WAIMAUKAU </p>
 
       <p class="address-line3">DRINKS, DINNER, AND DANCING TO FOLLOW</p>
@@ -108,11 +108,12 @@ function sanitize_input($data)
           <section id="rsvp-info">
             <div class="info-section">
               <h2>
-                <span class="rsvp-text">RSVP</span><br />
-                BY 15 FEBRUARY
+                <button class="rsvp-button" onclick="location.href='#rsvp'">R S V P</button><br>BY 15 FEBRUARY
               </h2>
             </div>
           </section>
+
+
 
           <div class="info-section">
             <h2 class="right-aligned">GETTING<br />THERE</h2>
@@ -133,8 +134,7 @@ function sanitize_input($data)
             <div class="button-wrapper">
               <p>
                 If you would like to transport by Taxi or Uber please get them
-                to do drop-offs/pickups in the parking area. We have contacted
-                this company if you would like to pre-book your transport. We
+                to do drop-offs/pickups in the parking area. We
                 recommend sorting this the previous day.
               </p>
 
@@ -155,7 +155,7 @@ function sanitize_input($data)
         <h2 class="faq-question">YOUR QUESTIONS ANSWERED...</h2>
 
         <h3 class="faq-question">What should I wear?</h3>
-        <p>The vibe is formal casual but please wear what you feel good in. Our bridal party colours are copper & navy. Also, the venue is mostly grass so you have been warned when choosing your shoes.</p>
+        <p>The vibe is formal casual but please wear what you feel good in. Our bridal party colours are rust & dark green. Also, the venue is mostly grass so you have been warned when choosing your shoes.</p>
 
         <h3 class="faq-question">Can I help in any way?</h3>
         <p>Absolutely! We will be at the venue setting up Wednesday to Friday and packing down Saturday to midday Sunday, and lots of little jobs to giveaway on the day. Swing by if you want to join in! We will also never say no to any baking!</p>
